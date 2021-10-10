@@ -1,5 +1,4 @@
-import App from './DEFAULT_FILE';
+/* eslint-disable import/prefer-default-export */
+import ScrollToTopButton from './ScrollToTopButton';
 
-export default {
-    App,
-};
+export { ScrollToTopButton };
