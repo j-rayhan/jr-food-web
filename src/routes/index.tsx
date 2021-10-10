@@ -18,6 +18,10 @@ import popular3 from '../assets/images/p-3.jpg';
 import popular4 from '../assets/images/p-4.jpg';
 import popular5 from '../assets/images/p-5.jpg';
 import popular6 from '../assets/images/p-6.jpg';
+import step1 from '../assets/images/step-1.jpg';
+import step2 from '../assets/images/step-2.jpg';
+import step3 from '../assets/images/step-3.jpg';
+import step4 from '../assets/images/step-4.jpg';
 
 const speciality = [
     {
@@ -94,6 +98,29 @@ const popular = [
         name: 'cold ice-cream',
         price: '$9 - $14',
         img: popular6,
+    },
+];
+
+const steps = [
+    {
+        key: '1',
+        name: 'choose your favorite food',
+        img: step1,
+    },
+    {
+        key: '2',
+        name: 'free and fast delivery',
+        img: step2,
+    },
+    {
+        key: '3',
+        name: 'easy payments methods',
+        img: step3,
+    },
+    {
+        key: '4',
+        name: 'and finally, enjoy your food',
+        img: step4,
     },
 ];
 const Main: React.FC = () => {
@@ -173,7 +200,7 @@ const Main: React.FC = () => {
             {/* popular section */}
             <section id="popular" className="popular">
                 <h1 className="heading">
-                    mont <span>popular</span> foods
+                    most <span>popular</span> foods
                 </h1>
 
                 <div className="box-container">
@@ -196,6 +223,21 @@ const Main: React.FC = () => {
                     ))}
                 </div>
             </section>
+
+            {/* step section */}
+            <div className="step-container">
+                <h1 className="heading">
+                    how it <span>works</span>
+                </h1>
+                <div className="steps">
+                    {steps.map((item) => (
+                        <div className="box" key={item.key}>
+                            <img src={item.img} alt="" />
+                            <h3>{item.name}</h3>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };
