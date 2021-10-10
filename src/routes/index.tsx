@@ -393,6 +393,29 @@ const Main: React.FC = () => {
                     </form>
                 </div>
             </section>
+            {/* footer section */}
+            <section className="footer">
+                <div className="share">
+                    <a href="https://" className="btn">
+                        facebook
+                    </a>
+                    <a href="https://" className="btn">
+                        twitter
+                    </a>
+                    <a href="https://" className="btn">
+                        instagram
+                    </a>
+                    <a href="https://" className="btn">
+                        pinterest
+                    </a>
+                    <a href="https://" className="btn">
+                        linkedin
+                    </a>
+                </div>
+                <h1 className="credit">
+                    created by <span>mr. j-rayhan</span> | all right reserved!
+                </h1>
+            </section>
         </div>
     );
 };
