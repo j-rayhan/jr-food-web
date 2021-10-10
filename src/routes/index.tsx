@@ -240,6 +240,7 @@ const ScrollToTopButton: React.FC = () => {
 const Main: React.FC = () => {
     const [menuClass, setMenuClass] = React.useState<string>('');
     const [navbarClass, setNavbarClass] = React.useState<string>('');
+
     return (
         <div>
             {/* Header section */}
