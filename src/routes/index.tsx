@@ -22,6 +22,15 @@ import step1 from '../assets/images/step-1.jpg';
 import step2 from '../assets/images/step-2.jpg';
 import step3 from '../assets/images/step-3.jpg';
 import step4 from '../assets/images/step-4.jpg';
+import gallery1 from '../assets/images/g-1.jpg';
+import gallery2 from '../assets/images/g-2.jpg';
+import gallery3 from '../assets/images/g-3.jpg';
+import gallery4 from '../assets/images/g-4.jpg';
+import gallery5 from '../assets/images/g-5.jpg';
+import gallery6 from '../assets/images/g-6.jpg';
+import gallery7 from '../assets/images/g-7.jpg';
+import gallery8 from '../assets/images/g-8.jpg';
+import gallery9 from '../assets/images/g-9.jpg';
 
 const speciality = [
     {
@@ -121,6 +130,54 @@ const steps = [
         key: '4',
         name: 'and finally, enjoy your food',
         img: step4,
+    },
+];
+
+const gallery = [
+    {
+        key: '1',
+        name: 'tasty food',
+        img: gallery1,
+    },
+    {
+        key: '2',
+        name: 'tasty food',
+        img: gallery2,
+    },
+    {
+        key: '3',
+        name: 'tasty food',
+        img: gallery3,
+    },
+    {
+        key: '4',
+        name: 'tasty food',
+        img: gallery4,
+    },
+    {
+        key: '5',
+        name: 'tasty food',
+        img: gallery5,
+    },
+    {
+        key: '6',
+        name: 'tasty food',
+        img: gallery6,
+    },
+    {
+        key: '7',
+        name: 'tasty food',
+        img: gallery7,
+    },
+    {
+        key: '8',
+        name: 'tasty food',
+        img: gallery8,
+    },
+    {
+        key: '9',
+        name: 'tasty food',
+        img: gallery9,
     },
 ];
 const Main: React.FC = () => {
@@ -238,6 +295,31 @@ const Main: React.FC = () => {
                     ))}
                 </div>
             </div>
+
+            {/* gallery section */}
+            <section className="gallery" id="gallery">
+                <h1 className="heading">
+                    our food <span> gallery</span>
+                </h1>
+                <div className="box-container">
+                    {gallery.map((item) => (
+                        <div className="box" key={item.key}>
+                            <img src={item.img} alt="" />
+                            <div className="content">
+                                <h3>{item.name}</h3>
+                                <p>
+                                    All you need to do is download one of the best food delivery
+                                    apps, make a selection, place an order, and make payment via
+                                    your smartphone, or pay on delivery.
+                                </p>
+                                <a href="#order" className="btn">
+                                    order now
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 };
