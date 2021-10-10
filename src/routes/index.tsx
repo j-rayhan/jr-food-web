@@ -1,4 +1,5 @@
 import React from 'react';
+import homeImg from '../assets/images/home-img.png';
 
 const Main: React.FC = () => {
     const [menuClass, setMenuClass] = React.useState<string>('');
@@ -31,7 +32,25 @@ const Main: React.FC = () => {
                 </nav>
             </header>
             {/* Home section */}
-            <h1>start ....</h1>
+            <section id="home" className="home">
+                <div className="content">
+                    <h3>food made with love</h3>
+                    <p>
+                        Getting food delivered right at your doorstep anytime anywhere is easier
+                        than ever. Thanks to all the incredible on-demand delivery apps available
+                        nowadays. All you need to do is download one of the best food delivery apps,
+                        make a selection, place an order, and make payment via your smartphone, or
+                        pay on delivery.
+                    </p>
+                    <a href="#order" className="btn">
+                        order now
+                    </a>
+                </div>
+
+                <div className="image">
+                    <img src={homeImg} alt="home-img" />
+                </div>
+            </section>
         </div>
     );
 };
