@@ -31,6 +31,9 @@ import gallery6 from '../assets/images/g-6.jpg';
 import gallery7 from '../assets/images/g-7.jpg';
 import gallery8 from '../assets/images/g-8.jpg';
 import gallery9 from '../assets/images/g-9.jpg';
+import review1 from '../assets/images/pic1.png';
+import review2 from '../assets/images/pic2.png';
+import review3 from '../assets/images/pic3.png';
 
 const speciality = [
     {
@@ -180,6 +183,24 @@ const gallery = [
         img: gallery9,
     },
 ];
+
+const reviews = [
+    {
+        key: '1',
+        name: 'Jojo yo',
+        img: review1,
+    },
+    {
+        key: '2',
+        name: 'johon dou',
+        img: review2,
+    },
+    {
+        key: '3',
+        name: 'Jing jo',
+        img: review3,
+    },
+];
 const Main: React.FC = () => {
     const [menuClass, setMenuClass] = React.useState<string>('');
     const [navbarClass, setNavbarClass] = React.useState<string>('');
@@ -316,6 +337,31 @@ const Main: React.FC = () => {
                                     order now
                                 </a>
                             </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            {/* review section */}
+            <section className="review" id="review">
+                <h1 className="heading">
+                    our customers <span> reviews</span>
+                </h1>
+                <div className="box-container">
+                    {reviews.map((item, index) => (
+                        <div className="box" key={item.key}>
+                            <img src={item.img} alt="" />
+                            <h3>{item.name}</h3>
+                            <div className="stars">
+                                <i className="fas fa-star" />
+                                <i className="fas fa-star" />
+                                <i className="fas fa-star" />
+                                <i className="fas fa-star" />
+                                <i className={`${index % 2 === 0 ? 'far' : 'fas'} fa-star`} />
+                            </div>
+                            <p>
+                                All you need to do is download one of the best food delivery apps,
+                                make a selection.
+                            </p>
                         </div>
                     ))}
                 </div>
