@@ -12,6 +12,12 @@ import boxImg5 from '../assets/images/s-img-5.jpg';
 import _boxImg5 from '../assets/images/s-5.png';
 import boxImg6 from '../assets/images/s-img-6.jpg';
 import _boxImg6 from '../assets/images/s-6.png';
+import popular1 from '../assets/images/p-1.jpg';
+import popular2 from '../assets/images/p-2.jpg';
+import popular3 from '../assets/images/p-3.jpg';
+import popular4 from '../assets/images/p-4.jpg';
+import popular5 from '../assets/images/p-5.jpg';
+import popular6 from '../assets/images/p-6.jpg';
 
 const speciality = [
     {
@@ -49,6 +55,45 @@ const speciality = [
         name: 'healty breakfast',
         img1: boxImg6,
         img2: _boxImg6,
+    },
+];
+
+const popular = [
+    {
+        key: '1',
+        name: 'tasty burger',
+        price: '$5 - $20',
+        img: popular1,
+    },
+    {
+        key: '2',
+        name: 'tasty cakes',
+        price: '$5 - $10',
+        img: popular2,
+    },
+    {
+        key: '3',
+        name: 'tasty sweets',
+        price: '$5 - $10',
+        img: popular3,
+    },
+    {
+        key: '4',
+        name: 'tasty cupcakes',
+        price: '$8 - $12',
+        img: popular4,
+    },
+    {
+        key: '5',
+        name: 'cold drinks',
+        price: '$6 - $10',
+        img: popular5,
+    },
+    {
+        key: '6',
+        name: 'cold ice-cream',
+        price: '$9 - $14',
+        img: popular6,
     },
 ];
 const Main: React.FC = () => {
@@ -121,6 +166,32 @@ const Main: React.FC = () => {
                                     your smartphone, or pay on delivery.
                                 </p>
                             </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            {/* popular section */}
+            <section id="popular" className="popular">
+                <h1 className="heading">
+                    mont <span>popular</span> foods
+                </h1>
+
+                <div className="box-container">
+                    {popular.map((item, index) => (
+                        <div className="box" key={item.key}>
+                            <span className="price"> {item.price}</span>
+                            <img src={item.img} alt="" />
+                            <h3>{item.name}</h3>
+                            <div className="stars">
+                                <i className="fas fa-star" />
+                                <i className="fas fa-star" />
+                                <i className="fas fa-star" />
+                                <i className="fas fa-star" />
+                                <i className={`${index % 2 === 0 ? 'far' : 'fas'} fa-star`} />
+                            </div>
+                            <a href="#order" className="btn">
+                                order now
+                            </a>
                         </div>
                     ))}
                 </div>
