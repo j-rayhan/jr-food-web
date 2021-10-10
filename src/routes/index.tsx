@@ -34,6 +34,7 @@ import gallery9 from '../assets/images/g-9.jpg';
 import review1 from '../assets/images/pic1.png';
 import review2 from '../assets/images/pic2.png';
 import review3 from '../assets/images/pic3.png';
+import orderImg1 from '../assets/images/order-img.jpg';
 
 const speciality = [
     {
@@ -364,6 +365,32 @@ const Main: React.FC = () => {
                             </p>
                         </div>
                     ))}
+                </div>
+            </section>
+            {/* order section */}
+            <section className="order" id="order">
+                <h1 className="heading">
+                    <span>order</span> now{' '}
+                </h1>
+                <div className="row">
+                    <div className="image">
+                        <img src={orderImg1} alt="" />
+                    </div>
+
+                    <form action="">
+                        <div className="inputBox">
+                            <input type="text" placeholder="name" />
+                            <input type="email" placeholder="email" />
+                        </div>
+                        <div className="inputBox">
+                            <input type="number" placeholder="number" />
+                            <input type="text" placeholder="food name" />
+                        </div>
+
+                        <textarea name="address" placeholder="address" id="" rows={3} />
+
+                        <input type="submit" value="Order now" className="btn" />
+                    </form>
                 </div>
             </section>
         </div>
